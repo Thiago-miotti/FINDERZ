@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body{
+    background: rgb(15,24,36);
+    background: linear-gradient(180deg, rgba(15,24,36,1) 39%, rgba(248,68,82,1) 90%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 8px 5px 15px rgb(26, 43, 65);
+    height: 25px;
+    padding: 10px 30px;
+}
+
+.navbar .logo a{
+    font-family: 'Russo One', sans-serif;
+    text-decoration: none;
+    color: #D6DCDC;
+    font-size: 20px;
+}
+
+.navbar .logo a:hover{
+    color: rgba(248,68,82,1);
+}
+
+.navbar a{
+    font-family: 'Russo One', sans-serif;
+    text-decoration: none;
+    color: #D6DCDC;
+}
+
+.tituloContainer{
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin-top:150px ;
+    color: #D6DCDC;
+}

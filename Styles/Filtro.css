@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:#832D39 ;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+.titulo{
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    font-size: 60px;
+    color:#fff ;
+    padding-left: 130px;
+    
+}
+.tituloFiltro{
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    font-size: 40px;
+    margin-left: 130px;
+    padding-top: 80px;
+}
+
+/*O Filtro em si*/
+
+.FiltroBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.form-Container{
+    align-self: flex-start ;
+    
+    
+}
+
+.Filtro-Nickname input{
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    
+}
+.Filtro-form p {
+    margin-bottom: 3px;
+}
+.Filtro-Nickname{
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    font-size: 25px; 
+    /* margin-left: 210px; */
+    margin-top: 50px;
+}
+
+.Rank-form{
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    font-size: 25px; 
+    /* margin-left: 210px; */
+    margin-top: 10px;
+}
+#Rank{
+    font-size: 20px;
+    font-family: 'Russo One';
+    border-radius: 10px;
+}
+.Personagem-form{
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    font-size: 25px; 
+    /* margin-left: 210px; */
+    margin-top: 20px;
+}
+#Personagem{
+    font-size: 20px;
+    font-family: 'Russo One';
+    border-radius: 10px;
+}
+.Filtro-vitorias{   
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    font-size: 25px; 
+    /* margin-left: 210px; */
+    margin-top: 20px; 
+}
+.Filtro-vitorias input{
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    
+}
+
+.Botao a{
+    height: 30px;
+    padding: 40px;
+    text-align: center;
+    line-height: 10px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #000;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Russo One';
+    background-color: #832D39;
+}
+
+.Botao a:hover{
+    box-shadow: 8px 5px 15px rgb(49, 49, 49);
+    background-color: #8d313d;
+}
+
+
+@media screen and (max-width:1200px){
+    .JettPic{
+        display: none;
+    }
+
+    .FiltroBox{
+        width: 100vw;
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .titulo h1{
+        font-size: 1.5em;
+    }
+
+    .titulo h2{
+        font-size: 1.1em ;
+    }
+
+    .FiltroBox{
+        flex-direction: column;
+    }
+
+    .form-Container{
+        align-self: center;
+        width: 80%;
+    }
+
+    .form-Container p,
+    .form-Container legend{
+        font-size: 2em;
+    }
+
+    .form-Container select,
+    .form-Container input[type=number],
+    .form-Container input[type=text]{
+        width: 80%;
+        height: 50px;
+    }
+
+    .titulo{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tituloFiltro{
+        margin: 0;
+        font-size: 1em
+    }
+}
+
+
+
+
+
+

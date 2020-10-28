@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body{
+    background-color:#101221;
+    font-family: 'Russo One';
+    display: flex;
+    justify-content: space-around;
+    
+    align-items: center;
+    height: 100vh;
+    background-image: url(/Assets/ValorantCadastro4.jpg);
+    background-repeat: no-repeat;
+}
+
+.spacer{
+    width: 200px;
+}
+
+.Container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 490px;
+    background-color:#101221;
+    color: #fff;
+    box-shadow: 11px 8px 22px -12px rgba(235, 223, 223, 0.75);
+}
+
+.form-group,
+.col,
+.row {
+    width: 340px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.containerTitle{
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 703px){
+    .spacer{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .botaoCadastro{
+        width: 90%;
+    }
+}
