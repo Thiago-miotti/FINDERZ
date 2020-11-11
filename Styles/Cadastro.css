@@ -56,3 +56,12 @@ form{
         width: 90%;
     }
 }
+.BotaoVoltar{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.BotaoVoltar a{
+    color: #fff;
+    font-size: 30px;
+}

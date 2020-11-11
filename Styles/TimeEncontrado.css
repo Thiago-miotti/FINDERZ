@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.MainContainer{
+    background-image: url("/Assets/background-generic.JPG");
+    width: 100vw;
+    height: 100vh;
+}
+
+.Container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20vh;
+    width: 100vw;
+}
+
+.Container1 h1{
+    font-family: 'Russo One';
+    color: #ffffff;
+    font-size: 90px;
+}
+.Container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+}
+.Container2 .Box1{
+    background-color: #832D39;
+    width: 350px;
+    height: 70%;
+}
+.Container2 .Box1 h1{
+    text-align: center;
+    margin-top: 25px;
+    font-family: 'Russo One';
+    color: #ffffff;
+    font-size: 45px;
+}
+.Container2 .Box2{
+    background-color: #832D39;
+    width: 350px;
+    height: 70%;
+}
+.Container2 .Box2 h1{
+    text-align: center;
+    margin-top: 25px;
+    font-family: 'Russo One';
+    color: #ffffff;
+    font-size: 45px;
+}
+.Container2 .Box1 .Jogadores{
+    margin-left: 60px;
+    margin-top: 55px;
+    font-family: 'Russo One';
+    color: #ffffff;
+    font-size: 25px;
+}
+.Container2 .Box1 .Jogadores h2{
+    margin-top: 25px;
+}
+
+.BotaoVoltar{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.BotaoVoltar a{
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Russo One';
+    text-decoration: none;
+}
+.BotaoVoltar a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 425px){
+    .Container1 h1{
+        font-size: 30px;
+    }
+    .Container2 {
+        flex-direction: column;
+    }
+
+    .Container2 .Box1,
+    .Container2 .Box2{
+        width: 90%;
+    }
+    .Container2 .Box2{
+        margin-top: 20px;
+    }
+}
+
+
