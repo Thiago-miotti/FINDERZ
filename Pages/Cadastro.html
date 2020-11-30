@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Finderz</title>
-    <link rel="stylesheet" href="../icons/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/localization/messages_pt_BR.min.js"></script>
+    
     <link rel="stylesheet" href="/Styles/Cadastro.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,16 +35,16 @@
                 <form id="CadastroForm">
                     <div class="form-group">
                         <label for="Email">E-mail</label>
-                        <input type="text" class="form-control" id="Email" aria-describedby="emailHelp"
+                        <input type="text" class="form-control" name="email" id="Email" aria-describedby="emailHelp"
                             placeholder="E-mail">
                     </div>
                     <div class="form-group">
                         <label for="username">Nickname</label>
-                        <input type="text" class="form-control" id="username" placeholder="Nickname">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Nickname">
                     </div>
                     <div class="form-group">
                         <label for="Senha">Senha</label>
-                        <input type="password" class="form-control" id="Senha" placeholder="Senha">
+                        <input type="password" class="form-control" name="Senha" id="Senha" placeholder="Senha">
                     </div>
                     <div class="form-group">
                         <label for="Confirmar Senha">Confirmar Senha</label>
@@ -53,29 +59,54 @@
         <a class="Subtexto" href="/Pages/Home.html"><i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar</a>
     </div>
 
-    <script>
-        $("#CadastroForm").on("submit", function (event) {
-            event.preventDefault();
-            submit(this);
-        });
+    <script type="text/javascript">
 
-        function submit(form) {
-            let formD = new FormData(form);
-            $.ajax({
+        $("#CadastroForm").validate({
+			
+			rules: {
+				
+				username: {
+					required: true,
+					minlength: 3, 
+					maxlength: 100
+				},
+                email: {
+					required: true,
+					minlength: 3, 
+					maxlength: 100
+				},
+				
+			},
+			
+			submitHandler: function () {
+				
+				if ($.active) {
+					return;
+				}
+				
+				let opcoes = {
+					
+					url: "http://localhost:4000/usuario/cadastro",
+					
+					method: "POST",
 
-                url: "https://localhost:4000/usuario/cadastro",
-                type: "POST",
-                data: {
-                    nome: 'thiago'
-                },
-                success: function (result) {
-                    console.log(result);
-                },
-                error: function (error) {
-                    console.log(error)
-                }
-            });
-        } 
+					data: $("#CadastroForm").serialize(),
+					
+					success: function (resposta) {
+						alert('Ok',resposta);
+					},
+					
+					error: function () {
+						alert("Deu ruim! :(");
+					}
+					
+				};
+				
+				$.ajax(opcoes);
+				
+			}
+			
+		});
     </script>
 </body>
 
